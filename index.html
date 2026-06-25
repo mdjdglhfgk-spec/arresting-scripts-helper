@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Military Base Enforcement Protocol</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>Warning and Arrest scripts</h1>
+        <p>Type in the search bar to filter violations. Click any line to copy it instantly.</p>
+    </div>
+
+    <div class="search-wrap">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M20 20L16.5 16.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <input type="text" id="search" class="search-box" placeholder="Search violation..." onkeyup="filterBlocks()">
+    </div>
+
+    <h2 class="section-title">Chapter 3: Standard Violations</h2>
+
+    <div class="block">
+        <div class="title">Trespassing MED</div>
+        <div class="arrest-section">
+            <span class="arrest-label">Arrest Script</span>
+            <div class="arrest-line" onclick="copyText(this)">You are under arrest for trespassing MED, you will be jailed for 120 seconds. You have the right to remain silent.</div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="title">Trespassing MP</div>
+        <div class="arrest-section">
+            <span class="arrest-label">Arrest Script</span>
+            <div class="arrest-line" onclick="copyText(this)">You are under arrest for trespassing MP, you will be jailed for 120 seconds. You have the right to remain silent.</div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="title">Trespassing USMC</div>
+        <div class="arrest-section">
+            <span class="arrest-label">Arrest Script</span>
+            <div class="arrest-line" onclick="copyText(this)">You are under arrest for trespassing USMC, you will be jailed for 120 seconds. You have the right to remain silent.</div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="title">Trespassing SOCOM</div>
+        <div class="arrest-section">
+            <span class="arrest-label">Arrest Script</span>
+            <div class="arrest-line" onclick="copyText(this)">You are under arrest for trespassing SOCOM, you will be jailed for 120 seconds. You have the right to remain silent.</div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="title">Trespassing Navy</div>
+        <div class="arrest-section">
+            <span class="arrest-label">Arrest Script</span>
+            <div class="arrest-line" onclick="copyText(this)">You are under arrest for trespassing Navy, you will be jailed for 120 seconds. You have the right to remain silent.</div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="title">Trolling</div>
+        <div class="warning-section">
+            <span class="warning-label">Warnings</span>
+            <div class="code-line" onclick="copyText(this)">Warning 1, Trolling.</div>
+            <div class="code-line" onclick="copyText(this)">Warning 2, Trolling.</div>
+            <div class="code-line" onclick="copyText(this)">Warning 3, Trolling.</div>
+        </div>
+        <div class="arrest-section">
+            <span class="arrest-label">Arrest Script</span>
+            <div class="arrest-line" onclick="copyText(this)">You are under arrest for Trolling, you will be jailed for 100 seconds. You have the right to remain silent.</div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="title">Disturbing an event</div>
+        <div class="warning-section">
+            <span class="warning-label">Warnings</span>
+            <div class="code-line" onclick="copyText(this)">Warning 1, Disturbing an event.</div>
+            <div class="code-line" onclick="copyText(this)">Warning 2, Disturbing an event.</div>
+            <div class="code-line" onclick="copyText(this)">Warning 3, Disturbing an event.</div>
+        </div>
+        <div class="arrest-section">
+            <span class="arrest-label">Arrest Script</span>
+            <div class="arrest-line" onclick="copyText(this)">You are under arrest for Disturbing an event, you will be jailed for 100 seconds. You have the right to remain silent.</div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="title">Threatening</div>
+        <div class="warning-section">
+            <span class="warning-label">Warnings</span>
+            <div class="code-line" onclick="copyText(this)">Warning 1, Threatening.</div>
+            <div class="code-line" onclick="copyText(this)">Warning 2, Threatening.</div>
+            <div class="code-line" onclick="copyText(this)">Warning 3, Threatening.</div>
+        </div>
+        <div class="arrest-section">
+            <span class="arrest-label">Arrest Script</span>
+            <div class="arrest-line" onclick="copyText(this)">You are under arrest for Threatening, you will be jailed for 90 seconds. You have the right to remain silent.</div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="title">Refusing/not wearing the uniform while on duty (Standard)</div>
+        <div class="warning-section">
+            <span class="warning-label">Warnings</span>
+            <div class="code-line" onclick="copyText(this)">Warning 1, Refusing/not wearing the uniform.</div>
+            <div class="code-line" onclick="copyText(this)">Warning 2, Refusing/not wearing the uniform.</div>
+            <div class="code-line" onclick="copyText(this)">Warning 3, Refusing/not wearing the uniform.</div>
+        </div>
+        <div class="arrest-section">
+            <span class="arrest-label">Arrest Script</span>
+            <div class="arrest-line" onclick="copyText(this)">You are under arrest for Refusing/not wearing the uniform while on duty, you will be jailed for 60 seconds. You have the right to remain silent.</div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="title">Refusing/not wearing the uniform while on duty (Divisional Guest)</div>
+        <div class="warning-section">
+            <span class="warning-label">Warnings</span>
+            <div class="code-line" onclick="copyText(this)">Warning 1, Refusing/not wearing the uniform.</div>
+            <div class="code-line" onclick="copyText(this)">Warning 2, Refusing/not wearing the uniform.</div>
+            <div class="code-line" onclick="copyText(this)">Warning 3, Refusing/not wearing the uniform.</div>
+        </div>
+        <div class="arrest-section">
+            <span class="arrest-label">Arrest Script</span>
+            <div class="arrest-line" onclick="copyText(this)">You are under arrest for Refusing/not wearing the uniform while on duty, you will be jailed for 180 seconds. You have the right to remain silent.</div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="title">Resisting arrest</div>
+        <div class="arrest-section">
+            <span class="arrest-label">Arrest Script</span>
+            <div class="arrest-line" onclick="copyText(this)">You will be jailed for an additional 70 seconds for resisting arrest.</div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="title">Refusing to listen to orders</div>
+        <div class="warning-section">
+            <span class="warning-label">Warnings</span>
+            <div class="code-line" onclick="copyText(this)">Warning 1, Refusing to listen to orders.</div>
+            <div class="code-line" onclick="copyText(this)">Warning 2, Refusing to listen to orders.</div>
+            <div class="code-line" onclick="copyText(this)">Warning 3, Refusing to listen to orders.</div>
+        </div>
+        <div class="arrest-section">
+            <span class="arrest-label">Arrest Script</span>
+            <div class="arrest-line" onclick="copyText(this)">You are under arrest for Refusing to listen to orders given from Enforcement Personnel, you will be jailed for 80 seconds. You have the right to remain silent.</div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="title">Disrupting duties of a division</div>
+        <div class="warning-section">
+            <span class="warning-label">Warnings</span>
+            <div class="code-line" onclick="copyText(this)">Warning 1, disrupting the operations/duties of a division.</div>
+            <div class="code-line" onclick="copyText(this)">Warning 2, disrupting the operations/duties of a division.</div>
+            <div class="code-line" onclick="copyText(this)">Warning 3, disrupting the operations/duties of a division.</div>
+        </div>
+        <div class="arrest-section">
+            <span class="arrest-label">Arrest Script</span>
+            <div class="arrest-line" onclick="copyText(this)">You are under arrest for Being a nuisance and disrupting the operations/duties of a division, you will be jailed for 100 seconds. You have the right to remain silent.</div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="title">Harassment</div>
+        <div class="warning-section">
+            <span class="warning-label">Warnings</span>
+            <div class="code-line" onclick="copyText(this)">Warning 1, Harassment.</div>
+            <div class="code-line" onclick="copyText(this)">Warning 2, Harassment.</div>
+            <div class="code-line" onclick="copyText(this)">Warning 3, Harassment.</div>
+        </div>
+        <div class="arrest-section">
+            <span class="arrest-label">Arrest Script</span>
+            <div class="arrest-line" onclick="copyText(this)">You are under arrest for Harassment, you will be jailed for 80 seconds. You have the right to remain silent.</div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="title">Open carrying firearms</div>
+        <div class="warning-section">
+            <span class="warning-label">Warnings</span>
+            <div class="code-line" onclick="copyText(this)">Warning 1, Open carrying firearms.</div>
+            <div class="code-line" onclick="copyText(this)">Warning 2, Open carrying firearms.</div>
+            <div class="code-line" onclick="copyText(this)">Warning 3, Open carrying firearms.</div>
+        </div>
+        <div class="arrest-section">
+            <span class="arrest-label">Arrest Script</span>
+            <div class="arrest-line" onclick="copyText(this)">You are under arrest for Open carrying firearms by pointing or aiming the gun, you will be jailed for 80 seconds. You have the right to remain silent.</div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="title">Touching grass (1st Offense)</div>
+        <div class="warning-section">
+            <span class="warning-label">Warnings</span>
+            <div class="code-line" onclick="copyText(this)">Warning 1, Touching grass.</div>
+        </div>
+        <div class="arrest-section">
+            <span class="arrest-label">Arrest Script</span>
+            <div class="arrest-line" onclick="copyText(this)">You are under arrest for Touching grass, you will be jailed for 120 seconds. You have the right to remain silent.</div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="title">Touching grass (2nd Offense)</div>
+        <div class="arrest-section">
+            <span class="arrest-label">Arrest Script</span>
+            <div class="arrest-line" onclick="copyText(this)">You are under arrest for Touching grass, you will be jailed for 300 seconds. You have the right to remain silent.</div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="title">Standing on structures (1st Offense)</div>
+        <div class="warning-section">
+            <span class="warning-label">Warnings</span>
+            <div class="code-line" onclick="copyText(this)">Warning 1, Standing on structures.</div>
+        </div>
+        <div class="arrest-section">
+            <span class="arrest-label">Arrest Script</span>
+            <div class="arrest-line" onclick="copyText(this)">You are under arrest for Standing on crates, signs or light posts, you will be jailed for 120 seconds. You have the right to remain silent.</div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="title">Standing on structures (2nd Offense)</div>
+        <div class="arrest-section">
+            <span class="arrest-label">Arrest Script</span>
+            <div class="arrest-line" onclick="copyText(this)">You are under arrest for Standing on crates, signs or light posts, you will be jailed for 200 seconds. You have the right to remain silent.</div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="title">Standing on Parade Squares/Training Areas</div>
+        <div class="warning-section">
+            <span class="warning-label">Warnings</span>
+            <div class="code-line" onclick="copyText(this)">Warning 1, Standing on Parade Squares/Training Areas.</div>
+        </div>
+        <div class="arrest-section">
+            <span class="arrest-label">Arrest Script</span>
+            <div class="arrest-line" onclick="copyText(this)">You are under arrest for Standing on Parade Squares/Training Areas as a citizen, you will be jailed for 120 seconds. You have the right to remain silent.</div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="title">Standing too close to the VIP</div>
+        <div class="warning-section">
+            <span class="warning-label">Warnings</span>
+            <div class="code-line" onclick="copyText(this)">Warning 1, Standing too close to the VIP.</div>
+            <div class="code-line" onclick="copyText(this)">Warning 2, Standing too close to the VIP.</div>
+            <div class="code-line" onclick="copyText(this)">Warning 3, Standing too close to the VIP.</div>
+        </div>
+        <div class="arrest-section">
+            <span class="arrest-label">Arrest Script</span>
+            <div class="arrest-line" onclick="copyText(this)">You are under arrest for Standing too close to the VIP, you will be jailed for 100 seconds. You have the right to remain silent.</div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="title">Trespassing the gate</div>
+        <div class="arrest-section">
+            <span class="arrest-label">Arrest Script</span>
+            <div class="arrest-line" onclick="copyText(this)">You are under arrest for Trespassing the gate, you will be jailed for 100 seconds. You have the right to remain silent.</div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="title">Trespassing the Sewers</div>
+        <div class="arrest-section">
+            <span class="arrest-label">Arrest Script</span>
+            <div class="arrest-line" onclick="copyText(this)">You are under arrest for Trespassing the Sewers, you will be jailed for 120 seconds. You have the right to remain silent.</div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="title">Trespassing the Hangar</div>
+        <div class="arrest-section">
+            <span class="arrest-label">Arrest Script</span>
+            <div class="arrest-line" onclick="copyText(this)">You are under arrest for Trespassing the Hangar, you will be jailed for 120 seconds. You have the right to remain silent.</div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="title">Trespassing HLS</div>
+        <div class="arrest-section">
+            <span class="arrest-label">Arrest Script</span>
+            <div class="arrest-line" onclick="copyText(this)">You are under arrest for Trespassing HLS, you will be jailed for 180 seconds. You have the right to remain silent.</div>
+        </div>
+    </div>
+
+    <h2 class="section-title">Chapter 4: Major Violations</h2>
+
+    <div class="block">
+        <div class="title">Impersonation</div>
+        <div class="warning-section">
+            <span class="warning-label">Warnings</span>
+            <div class="code-line" onclick="copyText(this)">Warning 1, Impersonation.</div>
+            <div class="code-line" onclick="copyText(this)">Warning 2, Impersonation.</div>
+            <div class="code-line" onclick="copyText(this)">Warning 3, Impersonation.</div>
+        </div>
+        <div class="arrest-section">
+            <span class="arrest-label">Arrest Script</span>
+            <div class="arrest-line" onclick="copyText(this)">You are under arrest for Impersonation / Pretending to be an high rank and commanding others, you will be jailed for 80 seconds. You have the right to remain silent.</div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="title">Random killing</div>
+        <div class="arrest-section">
+            <span class="arrest-label">Arrest Script</span>
+            <div class="arrest-line" onclick="copyText(this)">You are under arrest for Random killing, you will be jailed for 150 seconds. You have the right to remain silent.</div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="title">Random Shooting</div>
+        <div class="warning-section">
+            <span class="warning-label">Warnings</span>
+            <div class="code-line" onclick="copyText(this)">Warning 1, Random Shooting.</div>
+            <div class="code-line" onclick="copyText(this)">Warning 2, Random Shooting.</div>
+            <div class="code-line" onclick="copyText(this)">Warning 3, Random Shooting.</div>
+        </div>
+        <div class="arrest-section">
+            <span class="arrest-label">Arrest Script</span>
+            <div class="arrest-line" onclick="copyText(this)">You are under arrest for Random Shooting, you will be jailed for 120 seconds. You have the right to remain silent.</div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="title">Trespassing in the Headquarter building</div>
+        <div class="arrest-section">
+            <span class="arrest-label">Arrest Script</span>
+            <div class="arrest-line" onclick="copyText(this)">You are under arrest for Trespassing in the Headquarter building, you will be jailed for 200 seconds. You have the right to remain silent.</div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="title">Trespassing in a Federal Property</div>
+        <div class="arrest-section">
+            <span class="arrest-label">Arrest Script</span>
+            <div class="arrest-line" onclick="copyText(this)">You are under arrest for Trespassing in a Federal Property, you will be jailed for 150 seconds. You have the right to remain silent.</div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="title">Shooting in a Federal Property</div>
+        <div class="warning-section">
+            <span class="warning-label">Warnings</span>
+            <div class="code-line" onclick="copyText(this)">Warning 1, Shooting in a Federal Property.</div>
+            <div class="code-line" onclick="copyText(this)">Warning 2, Shooting in a Federal Property.</div>
+            <div class="code-line" onclick="copyText(this)">Warning 3, Shooting in a Federal Property.</div>
+        </div>
+        <div class="arrest-section">
+            <span class="arrest-label">Arrest Script</span>
+            <div class="arrest-line" onclick="copyText(this)">You are under arrest for Shooting in a Federal Property, you will be jailed for 130 seconds. You have the right to remain silent.</div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="title">Raiding as a civilian inside the base</div>
+        <div class="arrest-section">
+            <span class="arrest-label">Arrest Script</span>
+            <div class="arrest-line" onclick="copyText(this)">You are under arrest for Raiding as a civilian inside the base, you will be jailed for 180 seconds. You have the right to remain silent.</div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="title">Disturbing Official Events</div>
+        <div class="warning-section">
+            <span class="warning-label">Warnings</span>
+            <div class="code-line" onclick="copyText(this)">Warning 1, Disturbing Official Events.</div>
+        </div>
+        <div class="arrest-section">
+            <span class="arrest-label">Arrest Script</span>
+            <div class="arrest-line" onclick="copyText(this)">You are under arrest for Disturbing Official Events, you will be jailed for 100 seconds. You have the right to remain silent.</div>
+        </div>
+    </div>
+</div>
+
+<div id="toast" class="toast">Copied to clipboard!</div>
+
+<script>
+function filterBlocks() {
+    var input = document.getElementById('search');
+    var filter = input.value.toLowerCase();
+    var blocks = document.getElementsByClassName('block');
+    
+    for (var i = 0; i < blocks.length; i++) {
+        var text = blocks[i].textContent || blocks[i].innerText;
+        if (text.toLowerCase().indexOf(filter) > -1) {
+            blocks[i].style.display = "";
+        } else {
+            blocks[i].style.display = "none";
+        }
+    }
+}
+
+function copyText(element) {
+    var text = element.innerText || element.textContent;
+    navigator.clipboard.writeText(text).then(function() {
+        var toast = document.getElementById('toast');
+        toast.style.display = 'block';
+        setTimeout(function() {
+            toast.style.display = 'none';
+        }, 1500);
+    });
+}
+</script>
+
+</body>
+</html>

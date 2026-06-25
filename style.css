@@ -1,0 +1,296 @@
+/* ===========================================================
+   Military Base Enforcement Protocol — "Field Dossier" theme
+   =========================================================== */
+
+* { box-sizing: border-box; }
+
+:root {
+    --ink: #21241c;
+    --paper: #f6f3ea;
+    --paper-dim: #ece7d8;
+    --olive: #3f4a30;
+    --olive-deep: #262d1c;
+    --olive-mid: #5c6b46;
+    --brass: #ad8530;
+    --brass-light: #c9a23f;
+    --danger: #7a2e2a;
+    --danger-deep: #5c211e;
+    --warning: #8a5a1f;
+    --canvas: #1b1d17;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+body {
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-size: 11pt;
+    line-height: 1.55;
+    color: var(--ink);
+    background-color: var(--canvas);
+    background-image:
+        radial-gradient(circle at 20% 0%, rgba(173, 133, 48, 0.07), transparent 45%),
+        repeating-linear-gradient(135deg, rgba(255,255,255,0.015) 0px, rgba(255,255,255,0.015) 1px, transparent 1px, transparent 3px);
+    margin: 0;
+    padding: 36px 20px 60px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ---------- Header ---------- */
+.header {
+    position: relative;
+    background: linear-gradient(155deg, var(--olive) 0%, var(--olive-deep) 100%);
+    color: #f1efe4;
+    padding: 32px 30px 28px;
+    border-radius: 4px;
+    margin-bottom: 22px;
+    border: 1px solid #4d5a39;
+    box-shadow: 0 10px 30px -12px rgba(0,0,0,0.6);
+    overflow: hidden;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, var(--brass), var(--brass-light) 40%, var(--brass) 60%);
+    height: 4px;
+}
+
+.eyebrow {
+    display: block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 8.5pt;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--brass-light);
+    margin-bottom: 10px;
+}
+
+.header h1 {
+    font-family: 'Oswald', 'Arial', sans-serif;
+    margin: 0;
+    font-size: 23pt;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    line-height: 1.15;
+}
+
+.header p {
+    margin: 10px 0 0 0;
+    font-size: 9.5pt;
+    color: #b9bba8;
+    max-width: 460px;
+}
+
+.stamp {
+    position: absolute;
+    top: 22px;
+    right: 26px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 8pt;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: #d6705f;
+    border: 1.5px solid #d6705f;
+    border-radius: 3px;
+    padding: 5px 10px;
+    transform: rotate(4deg);
+    opacity: 0.85;
+    mix-blend-mode: screen;
+}
+
+/* ---------- Search ---------- */
+.search-wrap {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 17px;
+    height: 17px;
+    color: #8a8a78;
+    pointer-events: none;
+}
+
+.search-box {
+    width: 100%;
+    padding: 14px 16px 14px 44px;
+    font-family: 'Inter', sans-serif;
+    font-size: 11.5pt;
+    color: var(--ink);
+    border: 1px solid #d8d2bd;
+    background-color: var(--paper);
+    border-radius: 4px;
+    outline: none;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04), inset 0 0 0 1px transparent;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.search-box::placeholder { color: #9b9580; }
+
+.search-box:focus {
+    border-color: var(--brass);
+    box-shadow: 0 0 0 3px rgba(173, 133, 48, 0.18);
+}
+
+/* ---------- Section titles ---------- */
+h2.section-title {
+    position: relative;
+    font-family: 'Oswald', sans-serif;
+    font-size: 13.5pt;
+    font-weight: 500;
+    color: #f1efe4;
+    background: var(--olive-deep);
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 16px;
+    margin-top: 34px;
+    margin-bottom: 16px;
+    border-radius: 3px;
+    border-left: 5px solid var(--brass);
+}
+
+h2.section-title:first-of-type { margin-top: 0; }
+
+/* ---------- Violation card ---------- */
+.block {
+    background: var(--paper);
+    border: 1px solid #ddd6bf;
+    border-left: 4px solid var(--olive-mid);
+    border-radius: 5px;
+    padding: 16px 18px;
+    margin-bottom: 14px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.block:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    transform: translateY(-1px);
+}
+
+/* Major violations (Chapter 4) get the danger accent automatically */
+.section-title:nth-of-type(4) ~ .block {
+    border-left-color: var(--danger);
+}
+
+.title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 12.5pt;
+    letter-spacing: 0.2px;
+    color: var(--olive-deep);
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed #d8d2bd;
+}
+
+.warning-section, .arrest-section { margin-top: 10px; }
+.warning-section:first-child, .arrest-section:first-child { margin-top: 0; }
+
+.warning-label, .arrest-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 8pt;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 6px;
+}
+
+.warning-label { color: var(--warning); }
+.warning-label::before { content: "▲"; font-size: 7pt; }
+
+.arrest-label { color: var(--danger); }
+.arrest-label::before { content: "■"; font-size: 7pt; }
+
+.code-line, .arrest-line {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9.5pt;
+    line-height: 1.5;
+    padding: 9px 14px;
+    margin: 5px 0;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    transition: background-color 0.12s ease, padding-left 0.12s ease;
+    position: relative;
+}
+
+.code-line {
+    background-color: var(--paper-dim);
+    color: #4a4636;
+    border-left: 3px solid var(--olive-mid);
+}
+
+.code-line:hover {
+    background-color: #e3ddc6;
+    padding-left: 18px;
+}
+
+.arrest-line {
+    background-color: #f3e4e1;
+    color: var(--danger-deep);
+    border-left: 3px solid var(--danger);
+}
+
+.arrest-line:hover {
+    background-color: #ecd2cd;
+    padding-left: 18px;
+}
+
+.code-line::after, .arrest-line::after {
+    content: "copy";
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 7.5pt;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 0.12s ease;
+    color: inherit;
+}
+
+.code-line:hover::after, .arrest-line:hover::after { opacity: 0.5; }
+
+/* ---------- Toast ---------- */
+.toast {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: var(--olive-deep);
+    color: #f1efe4;
+    padding: 11px 22px;
+    border-radius: 4px;
+    border-left: 3px solid var(--brass-light);
+    display: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9pt;
+    letter-spacing: 0.3px;
+    box-shadow: 0 8px 24px -8px rgba(0,0,0,0.5);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 540px) {
+    body { padding: 18px 12px 50px; }
+    .header { padding: 24px 18px; }
+    .header h1 { font-size: 17pt; }
+    .stamp { display: none; }
+    .block { padding: 14px; }
+}
